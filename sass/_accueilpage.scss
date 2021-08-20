@@ -1,0 +1,167 @@
+
+
+.lieu {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem $appPadding;
+    background-color: rgb(234, 234, 234);
+    font-size: 1rem;
+    position: relative;
+  
+    &__icon {
+      margin-right: 1rem;
+    }
+  
+    &__text {
+      font-weight: 700;
+    }
+  }
+
+
+  .reservez {
+    padding: 2rem;
+    text-align: center;
+    background-color: rgb(246, 246, 246);
+        &__titre {
+         margin: 0;
+        }
+        &__soustitre {
+        font-weight: 300;
+        margin: 1.5rem 0;
+        }
+        
+  }
+
+  
+
+.Titre {
+  margin-top: 3rem;
+  margin-left: 1.6rem;
+}
+
+
+.card{
+  font-size:62.5%;
+  padding:.5rem;
+  height:3rem;
+  width:18.5rem;
+  font-size:0.6rem;
+  margin-left: 2.2rem;
+  margin-top: 2.5rem ;
+  border-radius:1rem;
+  background-color: rgb(246, 246, 246);
+  box-shadow:3px 3px 10px $color-gray;
+  transition:.3s linear;
+  
+  &:hover{
+    cursor:pointer;
+    background-color: #d3bbf1; 
+    box-shadow:5px 5px 10px darken($color-gray,10%);
+    transform:translateY(-5px);
+  }
+
+  &__icon {
+  margin-right: 1rem;
+  color: $color-gray;
+   &__icon:hover {
+     color: $color-primary !important;
+   }
+  }
+
+  
+  &__heading {
+    font-size: 1rem;
+    text-align: start;
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+
+  
+  &__Rond {
+    position: relative;
+    bottom : 2.2rem;
+    right: 1.3rem 
+  }
+
+  &__Rondforme {
+    width: 8% ;
+    height: 1.5rem ;
+    background-color : #9356DC ;
+    border:1px solid $color-gray;
+    border-radius: 1.2rem
+  }
+  
+  &__texte{
+    font-size: 1rem;
+    color:white;
+    position: absolute;
+    bottom: -0.8rem; left: 0.5rem;
+  }
+}
+
+.restaurant {
+  margin-top: 7rem;
+  height: 80rem;
+  background-color: $color-grayclair;
+  &__titre2 {
+    padding-left: 9%;
+    padding-top: 20%;
+  }
+}
+
+
+.cardc{
+  height:15rem;
+  width:20rem;
+  margin-left: 1.7rem;
+  font-size:1.1rem;
+  margin-top: 2rem;
+  border-radius:1rem;
+  box-shadow:3px 3px 10px $color-gray;
+  transition:.3s linear;
+  
+&:hover{
+  cursor:pointer;
+  box-shadow:5px 5px 10px darken($color-gray,10%);
+  transform:translateY(-5px);
+}
+
+  &__heading {
+    position:relative; 
+    bottom:1.5rem
+  }
+  
+  &__description {
+    position:relative; 
+    bottom:1.9rem
+  }
+
+&__picture-box{
+  width:100%;
+  height:85%;
+}
+
+&__picture{
+  width:100%;
+  height:80%;
+  border-radius:1rem 1em 0 0;
+  object-fit:cover;
+}
+
+&__body{
+  padding-left:1rem;
+  width:80%;
+  font-size: 0.7rem
+    
+}
+
+}
+
+
+
+
+
+
+
+  
+  

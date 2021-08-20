@@ -1,0 +1,124 @@
+.header {
+     
+    &__arrow {
+      position: absolute;
+      left: 2rem;
+      height: 2rem;
+      width: 2rem;
+      top: 50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: black;
+    }
+  }
+
+  .imgFond2 {
+    max-width: 100%;
+    max-height: 32rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .menu {
+    margin-top: -4rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: relative;
+
+    &__Head {
+      padding: 1rem 2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__titre {
+      font-family: "Shrikhand", "cursive";
+      height: 1.5rem;
+    }
+  }
+
+  .fondcarte {
+    background-color: #f6f6f6;
+    height: 91rem;
+  }
+
+  .TitreFR {
+    margin-top: -1;
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-bottom: -5%;
+   border: underline solid green;
+  }
+
+  
+
+  .prix {
+    width: 10%;
+    position: relative;
+    left: 18rem;
+    bottom: 1.9rem;
+  }
+
+  .cardFR{
+    font-size:62.5%;
+    padding:1rem;
+    height:2.8rem;
+    width:20rem;
+    font-size:0.9rem;
+    margin-left: 0.5rem;
+    margin-top: 2.5rem ;
+    margin-bottom: 2rem;
+    border-radius:1.6rem;
+    background-color: white;
+    box-shadow:3px 3px 10px $color-gray;
+    transition:.3s linear;
+    
+    &:hover{
+      cursor:pointer;
+      background-color: #d3bbf1; 
+      box-shadow:5px 5px 10px darken($color-gray,10%);
+      transform:translateY(-5px);
+    }
+
+    
+    &__icon {
+    margin-right: 1rem;
+    color: $color-gray;
+    
+    }
+  
+    
+    &__heading {
+      font-size: 1.2rem;
+      text-align: start;
+      margin-top: 0.1rem;
+      margin-bottom: -0.6rem;
+    }
+
+    &__soustitre1 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+    }
+
+    &__coeur {
+      position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    opacity: 1;
+    font-size: 24px;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    cursor: pointer;
+    }
+  }
+
+  .bouton {
+margin-left: 6.5rem;
+margin-top: 2rem;
+  }
+  

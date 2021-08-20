@@ -1,0 +1,396 @@
+
+/*  ----------------------------------------------------------------------------- responsive -----------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width:600px) and (max-width:850px)         /*------ petitécran -----------------------------------------*/ 
+{
+  
+  
+  .centrage {
+    margin-left: 27%;
+    margin-top: 10%;
+  }
+
+  .Titre {
+    text-align: center;
+  }
+  .restaurant {
+      height: 90rem;
+      &__titre2 {
+          margin-left: 10%;
+      }
+  }
+
+  .ipad {
+      margin-left: 15%;
+  }
+  .ipad2 {
+    margin-left: 15%;
+}
+
+  .cardc{
+  height:15rem;
+  width:30rem;
+  font-size:1.1rem;
+  border-radius:1rem;
+  box-shadow:3px 3px 10px $color-gray;
+  transition:.3s linear;
+  
+&:hover{
+  cursor:pointer;
+  box-shadow:5px 5px 10px darken($color-gray,10%);
+  transform:translateY(-5px);
+}
+
+  &__heading {
+    position:relative; 
+    bottom:2rem
+  }
+  
+  &__description {
+    position:relative; 
+    bottom:2.5rem
+  }
+
+&__picture-box{
+  width:100%;
+  height:85%;
+}
+
+&__picture{
+  width:100%;
+  height:80%;
+  border-radius:1rem 1em 0 0;
+  object-fit:cover;
+}
+
+&__body{
+  padding-left:1rem;
+  width:80%;
+  font-size: 0.7rem
+    
+}
+  }
+  
+}
+/*  ---------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+@media screen and (min-width:850px) and (max-width:999px)         /*------ Ipad -----------------------------------------*/ 
+{
+  .flexBetween {
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+    top: 30em;
+    right: 7rem;
+      width: 80%;
+      margin-left: 9rem;
+  }
+
+  .responsive {
+    position: absolute;
+    top: 10em;
+    right: 12rem;
+  }
+
+  .restaurant {
+    margin-top: 20rem
+   }
+   .restaurant__titre2{
+    margin-left: 15rem;
+    padding-top: 5rem;
+  }
+
+  .ipad {
+      margin-top: 10rem;
+      margin-left: 3rem;
+      
+  }
+
+  .ipad2 {
+    position: relative;
+    top: -5rem;
+    left: -5rem;
+  }
+
+  .centrage {
+      margin-left: 10rem;
+  }
+
+  .Titre {
+    text-align: center;
+    margin-top: 6rem;
+  }
+   /*  ------ Carte----------------------------------------- */
+   
+
+  .centrage {
+      width: 90%;
+      position: relative;
+      top: 0;
+      right: 7rem;
+  }
+  
+  .cardc{
+      margin-top: 30rem;
+    height:15rem;
+    width:40rem;
+    margin-left: 1.7rem;
+    font-size:1.1rem;
+    margin-bottom: 2rem;
+    border-radius:1rem;
+    box-shadow:3px 3px 10px $color-gray;
+    transition:.3s linear;
+    
+  &:hover{
+    cursor:pointer;
+    box-shadow:5px 5px 10px darken($color-gray,10%);
+    transform:translateY(-5px);
+  }
+  
+    &__heading {
+      position:relative; 
+      bottom:2rem
+    }
+    
+    &__description {
+      position:relative; 
+      bottom:2.5rem
+    }
+  
+  &__picture-box{
+    width:100%;
+    height:85%;
+  }
+  
+  &__picture{
+    width:100%;
+    height:80%;
+    border-radius:1rem 1em 0 0;
+    object-fit:cover;
+  }
+  
+  &__body{
+    padding-left:1rem;
+    width:80%;
+    font-size: 0.7rem
+      
+  }
+  }
+
+}
+/*  ---------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (min-width:1500px)         /*  ------ pc----------------------------------------- */ 
+{
+  .flexBetween {
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 60%;
+      margin-left: 24rem;
+  }
+
+  .restaurant {
+      height: 60rem;
+  }
+
+  .Titre {
+    text-align: center;
+    margin-top: 6rem;
+  }
+
+  .margefooter {
+    text-align: center;
+  }
+
+  .footer__icon{
+ margin-right: 0.5rem;
+  }
+  /*  ------ Carte----------------------------------------- */
+  .restaurant__titre2{
+    margin-left: 45rem;
+    padding-top: 5rem;
+  }
+  
+  .cardc{
+    height:15rem;
+    width:40rem;
+    margin-left: 1.7rem;
+    font-size:1.1rem;
+    margin-bottom: 2rem;
+    border-radius:1rem;
+    box-shadow:3px 3px 10px $color-gray;
+    transition:.3s linear;
+    
+  &:hover{
+    cursor:pointer;
+    box-shadow:5px 5px 10px darken($color-gray,10%);
+    transform:translateY(-5px);
+  }
+  
+    &__heading {
+      position:relative; 
+      bottom:2rem
+    }
+    
+    &__description {
+      position:relative; 
+      bottom:2.5rem
+    }
+  
+  &__picture-box{
+    width:100%;
+    height:85%;
+  }
+  
+  &__picture{
+    width:100%;
+    height:80%;
+    border-radius:1rem 1em 0 0;
+    object-fit:cover;
+  }
+  
+  &__body{
+    padding-left:1rem;
+    width:80%;
+    font-size: 0.7rem
+      
+  }
+  
+  }
+  /*  ------------------------------------------------------------Les Menus-------------------------------------------------*/
+  .margeLA {
+    width: 100%;
+    }
+
+    .flexBetween2 {
+      display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin-left: 15rem; 
+    }
+
+    .imgfond2 {
+      max-width: 100%;
+      max-height: 35rem !important;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+  }
+
+  .bouton {
+    position: relative;
+    left: 45rem;
+    top: 4rem;
+  }
+
+ .menu {
+  height: 10rem;
+  &__head {
+    margin-bottom: 5rem;
+    margin-left: 15rem;
+  }
+}
+
+  .fondcarte {
+    height: 50rem !important;
+  }
+
+}
+/*  ---------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (min-width:1000px) and (max-width:1499px)          /* ------ pc-petitécran----------------------------------------- */ 
+{
+  .flexBetween {
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin-left: 3rem;
+  }
+
+  .Titre {
+    text-align: center;
+    margin-top: 6rem;
+  }
+
+  .restaurant {
+      height: 53rem;
+      &__titre2{
+        margin-left: 7rem;
+        padding-top: 5rem;
+      }
+  }
+
+  .centrage {
+      margin-left: 7rem;
+      width: 80%;
+  }
+
+  .ipad {
+    width: 70%;
+    margin-left: 11rem;
+  }
+
+  .ipad2 {
+    width: 70%;
+    margin-left: 11rem;
+  }
+
+   /*  ------ Carte----------------------------------------- */
+     
+  .cardc{
+    height:15rem;
+    width:40rem;
+    margin-left: 1.7rem;
+    font-size:1.1rem;
+    margin-bottom: 2rem;
+    border-radius:1rem;
+    box-shadow:3px 3px 10px $color-gray;
+    transition:.3s linear;
+    
+  &:hover{
+    cursor:pointer;
+    box-shadow:5px 5px 10px darken($color-gray,10%);
+    transform:translateY(-5px);
+  }
+  
+    &__heading {
+      position:relative; 
+      bottom:2rem
+    }
+    
+    &__description {
+      position:relative; 
+      bottom:2.5rem
+    }
+  
+  &__picture-box{
+    width:100%;
+    height:85%;
+  }
+  
+  &__picture{
+    width:100%;
+    height:80%;
+    border-radius:1rem 1em 0 0;
+    object-fit:cover;
+  }
+  
+  &__body{
+    padding-left:1rem;
+    width:80%;
+    font-size: 0.7rem
+      
+  }
+  
+  }
+}
+
+
+/*  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
