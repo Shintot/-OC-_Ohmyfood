@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 body, html {
   margin: 0;
@@ -210,8 +211,27 @@ button:hover {
   width: 80%;
   font-size: 0.7rem;
 }
+.cardc__coeur {
+  position: relative;
+  cursor: pointer;
+  opacity: 0;
+  transform-origin: bottom;
+  opacity: 1;
+  font-size: 24px;
+  left: 16rem;
+  bottom: 5rem;
+  width: 10%;
+  cursor: pointer;
+}
 
 /*  ----------------------------------------------------------------------------- responsive -----------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 599px) {
+  .largeur {
+    width: 90% !important;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
 @media screen and (min-width: 600px) and (max-width: 850px) {
   .centrage {
     margin-left: 27%;
@@ -287,10 +307,12 @@ button:hover {
     margin-left: 9rem;
   }
 
-  .responsive {
-    position: absolute;
-    top: 10em;
-    right: 12rem;
+  .flexBetween2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
   }
 
   .restaurant {
@@ -380,6 +402,10 @@ button:hover {
     margin-left: 24rem;
   }
 
+  .largeur {
+    width: 30%;
+  }
+
   .restaurant {
     height: 60rem;
   }
@@ -441,6 +467,9 @@ button:hover {
     width: 80%;
     font-size: 0.7rem;
   }
+  .cardc__coeur {
+    margin-left: 12rem;
+  }
 
   /*  ------------------------------------------------------------Les Menus-------------------------------------------------*/
   .margeLA {
@@ -488,6 +517,18 @@ button:hover {
     align-items: center;
     width: 90%;
     margin-left: 3rem;
+  }
+
+  .flexBetween2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-left: 3rem;
+  }
+
+  .largeur {
+    width: 30%;
   }
 
   .Titre {
@@ -618,49 +659,74 @@ button:hover {
   bottom: 1.9rem;
 }
 
-.cardFR {
-  font-size: 62.5%;
-  padding: 1rem;
-  height: 2.8rem;
-  width: 20rem;
-  font-size: 0.9rem;
-  margin-left: 0.5rem;
-  margin-top: 2.5rem;
-  margin-bottom: 2rem;
-  border-radius: 1.6rem;
+.plat {
   background-color: white;
-  box-shadow: 3px 3px 10px #c0b9b9;
-  transition: 0.3s linear;
-}
-.cardFR:hover {
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   cursor: pointer;
-  background-color: #d3bbf1;
-  box-shadow: 5px 5px 10px #a89e9e;
-  transform: translateY(-5px);
+  animation: itemAppear 0.6s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  transform: scale(0);
+  max-width: 100%;
 }
-.cardFR__icon {
-  margin-right: 1rem;
-  color: #c0b9b9;
+.plat__header {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
 }
-.cardFR__heading {
-  font-size: 1.2rem;
-  text-align: start;
-  margin-top: 0.1rem;
-  margin-bottom: -0.6rem;
+.plat__title {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.cardFR__soustitre1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
+.plat__description {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.cardFR__coeur {
-  position: absolute;
-  cursor: pointer;
-  opacity: 0;
-  opacity: 1;
-  font-size: 24px;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  cursor: pointer;
+.plat__price {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
+}
+.plat__confirmation {
+  background-color: #99E2D0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+.plat:hover .plat__confirmation {
+  margin-right: -1rem;
+}
+.plat__wrapIcon {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+.plat:hover .plat__wrapIcon {
+  transform: rotate(0);
+}
+.plat__icon {
+  color: #99E2D0;
 }
 
 .bouton {
@@ -668,22 +734,84 @@ button:hover {
   margin-top: 2rem;
 }
 
-.imgFond2 {
-  max-width: 100%;
-  max-height: 15rem;
+.chargement {
+  position: fixed;
+  height: 100%;
   width: 100%;
-  object-fit: cover;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: loader 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chargement__carré {
+  height: 1rem;
+  width: 1rem;
+}
+.chargement__carrécontenant {
+  display: flex;
+  width: 6.5rem;
+  justify-content: space-between;
+}
+.chargement__carré-1 {
+  background-color: #9356DC;
+}
+.chargement__carré-2 {
+  background-color: #FF79DA;
+}
+.chargement__carré-3 {
+  background-color: #99E2D0;
 }
 
-.fondcarte {
-  height: 98rem;
+.délai-0 {
+  animation-delay: 0ms;
 }
 
-.prix {
-  width: 10%;
-  position: relative;
-  left: 18rem;
-  bottom: 1.9rem;
+.délai-1 {
+  animation-delay: 0.1s;
+}
+
+.délai-2 {
+  animation-delay: 0.2s;
+}
+
+.largeur {
+  width: 30%;
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes rotate-scale-up {
+  0% {
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+.rotate-scale-up {
+  animation: rotate-scale-up 0.65s linear infinite;
+}
+
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,15 +1,23 @@
 
 /*  ----------------------------------------------------------------------------- responsive -----------------------------------------------------------------------------------------------*/
-
+@media screen and (max-width:599px) {
+  .largeur {
+    width: 90% !important; 
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
 @media screen and (min-width:600px) and (max-width:850px)         /*------ petitécran -----------------------------------------*/ 
 {
-  
-  
+
+   
+
   .centrage {
     margin-left: 27%;
     margin-top: 10%;
   }
 
+  
   .Titre {
     text-align: center;
   }
@@ -89,11 +97,15 @@
       margin-left: 9rem;
   }
 
-  .responsive {
-    position: absolute;
-    top: 10em;
-    right: 12rem;
+  .flexBetween2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
   }
+
+  
 
   .restaurant {
     margin-top: 20rem
@@ -194,6 +206,10 @@
       margin-left: 24rem;
   }
 
+  .largeur {
+    width: 30%;
+  }
+
   .restaurant {
       height: 60rem;
   }
@@ -260,6 +276,10 @@
     font-size: 0.7rem
       
   }
+
+  &__coeur {
+    margin-left: 12rem;
+  }
   
   }
   /*  ------------------------------------------------------------Les Menus-------------------------------------------------*/
@@ -312,6 +332,18 @@
       align-items: center;
       width: 90%;
       margin-left: 3rem;
+  }
+
+  .flexBetween2 {
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin-left: 3rem;
+  }
+
+  .largeur {
+    width: 30%;
   }
 
   .Titre {

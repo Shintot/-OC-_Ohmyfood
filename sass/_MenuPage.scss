@@ -64,56 +64,83 @@
     bottom: 1.9rem;
   }
 
-  .cardFR{
-    font-size:62.5%;
-    padding:1rem;
-    height:2.8rem;
-    width:20rem;
-    font-size:0.9rem;
-    margin-left: 0.5rem;
-    margin-top: 2.5rem ;
-    margin-bottom: 2rem;
-    border-radius:1.6rem;
+  .plat {
     background-color: white;
-    box-shadow:3px 3px 10px $color-gray;
-    transition:.3s linear;
-    
-    &:hover{
-      cursor:pointer;
-      background-color: #d3bbf1; 
-      box-shadow:5px 5px 10px darken($color-gray,10%);
-      transform:translateY(-5px);
-    }
-
-    
-    &__icon {
-    margin-right: 1rem;
-    color: $color-gray;
-    
+    padding: 1rem;
+    display: flex;
+    border-radius: 0.75rem;
+    margin: 1rem 0;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    animation: itemAppear .6s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+    transform: scale(0);
+    max-width: 100%;
+  
+    &__header {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      flex: 1;
     }
   
-    
-    &__heading {
-      font-size: 1.2rem;
-      text-align: start;
-      margin-top: 0.1rem;
-      margin-bottom: -0.6rem;
+    &__title {
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
-
-    &__soustitre1 {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 300;
+  
+    &__description {
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
-
-    &__coeur {
-      position: absolute;
-    cursor: pointer;
-    opacity: 0;
-    opacity: 1;
-    font-size: 24px;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    cursor: pointer;
+  
+    &__price {
+      font-weight: bold;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding-left: 0.5rem;
+    }
+  
+    &__confirmation {
+      background-color: $color-tertiary;
+      margin: -1rem -5rem -1rem 1rem;
+      width: 4rem;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition-duration: 0.5s;
+    }
+  
+    &:hover &__confirmation {
+      margin-right: -1rem;
+    }
+  
+    &__wrapIcon {
+      height: 1.6rem;
+      width: 1.6rem;
+      background-color: white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 100px;
+      transform: rotate(180deg);
+      transition-duration: 0.5s;
+  
+    }
+  
+    &:hover &__wrapIcon {
+      transform: rotate(0);
+    }
+  
+    &__icon {
+      color: $color-tertiary;
     }
   }
 

@@ -1,0 +1,82 @@
+.chargement {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.90);
+    animation: loader 0.01s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 10000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    &__carré {
+    height: 1rem;
+    width: 1rem;
+    
+
+    &contenant {
+    display: flex;
+      width: 6.5rem;
+      justify-content: space-between;
+    }
+
+    &-1 {
+        background-color:$color-primary ;
+    }
+
+    &-2 {
+        background-color: $color-secondary;
+    }
+
+    &-3 {
+        background-color: $color-tertiary;
+    }
+}
+
+
+}
+
+.délai-0 {
+  animation-delay: 0ms;
+}
+
+.délai-1 {
+  animation-delay: .1s;
+}
+
+.délai-2 {
+  animation-delay: .2s;
+}
+
+.largeur {
+  width: 30%;
+}
+
+@keyframes loader {
+    100% {
+      opacity: 0;
+      z-index: -10;
+    }
+  } 
+
+  @keyframes  rotate-scale-up {
+    0%{transform:scale(1) rotateZ(0)}50%{transform:scale(2) rotateZ(180deg)}100%{transform:scale(1) rotateZ(360deg)}
+}
+
+.rotate-scale-up {
+    animation:rotate-scale-up .65s linear infinite
+}
+
+@keyframes itemAppear {
+  0% {
+    transform: scale(0)
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
