@@ -6,6 +6,17 @@
     margin-left: 1rem;
     margin-right: 1rem;
   }
+
+  .fondcarte {
+    width: 100% !important;
+    margin-left: 0 !important;
+    height: 73rem !important;
+  }
+
+  .menu {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
 }
 @media screen and (min-width:600px) and (max-width:850px)         /*------ petitécran -----------------------------------------*/ 
 {
@@ -203,9 +214,19 @@
       justify-content: space-between;
       align-items: center;
       width: 60%;
-      margin-left: 24rem;
+      margin-left: 23rem;
   }
 
+  .flexBetweenfooter {
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 40%;
+      margin-left: 34rem;
+      margin-top: 1.5rem !important;
+  }
+  
+    
   .largeur {
     width: 30%;
   }
@@ -216,6 +237,7 @@
 
   .Titre {
     text-align: center;
+    margin-right: 2rem;
     margin-top: 6rem;
   }
 
@@ -255,7 +277,7 @@
     
     &__description {
       position:relative; 
-      bottom:2.5rem
+      bottom:2rem
     }
   
   &__picture-box{
@@ -278,7 +300,7 @@
   }
 
   &__coeur {
-    margin-left: 12rem;
+    margin-left: 7.5rem;
   }
   
   }
@@ -304,7 +326,7 @@
 
   .bouton {
     position: relative;
-    left: 45rem;
+    left: 36rem;
     top: 4rem;
   }
 
@@ -317,12 +339,18 @@
 }
 
   .fondcarte {
-    height: 50rem !important;
+    height: 35rem !important;
   }
 
 }
-/*  ---------------------------------------------------------------------------------------------------------------------------*/
 
+
+/*  ---------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width:1000px) and (max-width:1100px) {
+.flexBetween {
+  display: none;
+}
+}
 
 @media screen and (min-width:1000px) and (max-width:1499px)          /* ------ pc-petitécran----------------------------------------- */ 
 {
@@ -344,6 +372,14 @@
 
   .largeur {
     width: 30%;
+  }
+
+  .fondcarte {
+    height: 35rem !important;
+  }
+
+  .bouton {
+    margin-left: 40% !important;
   }
 
   .Titre {

@@ -25,26 +25,88 @@
   .menu {
     margin-top: -4rem;
     border-radius: 2rem 2rem 0 0;
-    background-color: #f6f6f6;
+    background-color: #f6f6f6 !important;
     z-index: 1;
     position: relative;
+    width: 80%;
+    margin-left: 10%;
+    
 
     &__Head {
       padding: 1rem 2rem 0 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      
     }
 
     &__titre {
       font-family: "Shrikhand", "cursive";
       height: 1.5rem;
     }
+
+    &__coeur {
+      height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: 0 solid transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    background-color: #000;
+    
+      &:hover::before {
+        opacity: 1;
+      }
+      &::before {
+        opacity: 0;
+        transition: 0.5s;
+        content: "";
+        position: absolute;
+       top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+      }
+    }
+
+    &__coeur:before, &__like {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+  }
+
+    &__like {
+      transition-duration: .25s;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: lighten;
+    
+    }
+
+    &__coeur:hover {
+      .menu__like {
+        &--noBg {
+          opacity: 0;
+        }
+      }
+    }
   }
 
   .fondcarte {
     background-color: #f6f6f6;
     height: 91rem;
+    width: 80%;
+    margin-left: 10%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
   }
 
   .TitreFR {
@@ -53,8 +115,19 @@
     padding-left: 5%;
     padding-bottom: -5%;
    border: underline solid green;
+
+   
   }
 
+  .TitreFR:after {
+    content: "";
+   width: 3rem;
+   height: .25rem;
+   background-color: #99e2d0;
+   position: absolute;
+   left: 2rem;
+   bottom: 18rem;
+  }
   
 
   .prix {

@@ -134,9 +134,6 @@ button:hover {
   margin-right: 1rem;
   color: #c0b9b9;
 }
-.card__icon__icon:hover {
-  color: #9356DC !important;
-}
 .card__heading {
   font-size: 1rem;
   text-align: start;
@@ -230,6 +227,17 @@ button:hover {
     width: 90% !important;
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+
+  .fondcarte {
+    width: 100% !important;
+    margin-left: 0 !important;
+    height: 73rem !important;
+  }
+
+  .menu {
+    width: 100% !important;
+    margin-left: 0 !important;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 850px) {
@@ -399,7 +407,16 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     width: 60%;
-    margin-left: 24rem;
+    margin-left: 23rem;
+  }
+
+  .flexBetweenfooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    margin-left: 34rem;
+    margin-top: 1.5rem !important;
   }
 
   .largeur {
@@ -412,6 +429,7 @@ button:hover {
 
   .Titre {
     text-align: center;
+    margin-right: 2rem;
     margin-top: 6rem;
   }
 
@@ -450,7 +468,7 @@ button:hover {
   }
   .cardc__description {
     position: relative;
-    bottom: 2.5rem;
+    bottom: 2rem;
   }
   .cardc__picture-box {
     width: 100%;
@@ -468,7 +486,7 @@ button:hover {
     font-size: 0.7rem;
   }
   .cardc__coeur {
-    margin-left: 12rem;
+    margin-left: 7.5rem;
   }
 
   /*  ------------------------------------------------------------Les Menus-------------------------------------------------*/
@@ -493,7 +511,7 @@ button:hover {
 
   .bouton {
     position: relative;
-    left: 45rem;
+    left: 36rem;
     top: 4rem;
   }
 
@@ -506,10 +524,15 @@ button:hover {
   }
 
   .fondcarte {
-    height: 50rem !important;
+    height: 35rem !important;
   }
 }
 /*  ---------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 1000px) and (max-width: 1100px) {
+  .flexBetween {
+    display: none;
+  }
+}
 @media screen and (min-width: 1000px) and (max-width: 1499px) {
   .flexBetween {
     display: flex;
@@ -529,6 +552,14 @@ button:hover {
 
   .largeur {
     width: 30%;
+  }
+
+  .fondcarte {
+    height: 35rem !important;
+  }
+
+  .bouton {
+    margin-left: 40% !important;
   }
 
   .Titre {
@@ -624,9 +655,11 @@ button:hover {
 .menu {
   margin-top: -4rem;
   border-radius: 2rem 2rem 0 0;
-  background-color: #f6f6f6;
+  background-color: #f6f6f6 !important;
   z-index: 1;
   position: relative;
+  width: 80%;
+  margin-left: 10%;
 }
 .menu__Head {
   padding: 1rem 2rem 0 1rem;
@@ -638,10 +671,58 @@ button:hover {
   font-family: "Shrikhand", "cursive";
   height: 1.5rem;
 }
+.menu__coeur {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: #000;
+}
+.menu__coeur:hover::before {
+  opacity: 1;
+}
+.menu__coeur::before {
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+.menu__coeur:before, .menu__like {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.menu__like {
+  transition-duration: 0.25s;
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+}
+.menu__coeur:hover .menu__like--noBg {
+  opacity: 0;
+}
 
 .fondcarte {
   background-color: #f6f6f6;
   height: 91rem;
+  width: 80%;
+  margin-left: 10%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .TitreFR {
@@ -650,6 +731,16 @@ button:hover {
   padding-left: 5%;
   padding-bottom: -5%;
   border: underline solid green;
+}
+
+.TitreFR:after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 2rem;
+  bottom: 18rem;
 }
 
 .prix {
@@ -812,6 +903,17 @@ button:hover {
   100% {
     transform: scale(1);
   }
+}
+@keyframes effet {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  100% {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
+  }
+}
+.effet {
+  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 /*# sourceMappingURL=style.css.map */

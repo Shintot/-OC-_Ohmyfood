@@ -63,9 +63,7 @@
   &__icon {
   margin-right: 1rem;
   color: $color-gray;
-   &__icon:hover {
-     color: $color-primary !important;
-   }
+
   }
 
   
@@ -149,6 +147,7 @@
   border-radius:1rem 1em 0 0;
   object-fit:cover;
 }
+
 
 &__body{
   padding-left:1rem;
