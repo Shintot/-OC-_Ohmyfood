@@ -33,7 +33,7 @@
     
 
     &__Head {
-      padding: 1rem 2rem 0 1rem;
+      padding: 1rem 2.5rem 0 2.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -42,7 +42,7 @@
 
     &__titre {
       font-family: "Shrikhand", "cursive";
-      height: 1.5rem;
+      
     }
 
     &__coeur {
@@ -109,12 +109,19 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
   }
 
+  .fondcarte2 {
+    background-color: #f6f6f6;
+    height: 91rem;
+    width: 80%;
+    margin-left: 10%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  }
+
   .TitreFR {
-    margin-top: -1;
-    padding-top: 10%;
-    padding-left: 5%;
-    padding-bottom: -5%;
-   border: underline solid green;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: .3rem;
+    font-weight: 400;
 
    
   }
@@ -125,8 +132,8 @@
    height: .25rem;
    background-color: #99e2d0;
    position: absolute;
-   left: 2rem;
-   bottom: 18rem;
+   left: 0rem;
+   bottom: 0rem;
   }
   
 
@@ -217,8 +224,10 @@
     }
   }
 
+  .btn {
+    padding-left: 2%;
+  }
   .bouton {
-margin-left: 6.5rem;
 margin-top: 2rem;
   }
   
