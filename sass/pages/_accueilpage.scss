@@ -45,6 +45,7 @@
   background-color: #EAEAEA;
   font-size: 18px;
   width: 8%;
+  
 }
 
 
@@ -66,13 +67,18 @@
     background-color: #d3bbf1; 
     box-shadow:5px 5px 10px darken($color-gray,10%);
     transform:translateY(-5px);
+    
   }
 
   &__icon {
   margin-right: 1rem;
   color: $color-gray;
-
+  
   }
+
+  &:hover i{
+    color: $color-primary;
+}
 
   
   &__heading {
@@ -207,6 +213,14 @@
 }
 
 }
+
+.footer__icon {
+  margin-right: 1%;
+}
+
+
+
+
 
 
 
